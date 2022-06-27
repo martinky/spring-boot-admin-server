@@ -5,7 +5,7 @@ My minimal [Spring Boot Admin](https://github.com/codecentric/spring-boot-admin)
 ## Build
 
 ```shell
-docker build -t spring-boot-admin-server
+docker build -t spring-boot-admin-server .
 ```
 
 ## Usage
