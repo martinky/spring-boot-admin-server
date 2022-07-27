@@ -1,14 +1,14 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-	id("org.springframework.boot") version "2.7.0"
+	id("org.springframework.boot") version "2.7.2"
 	id("io.spring.dependency-management") version "1.0.11.RELEASE"
 	kotlin("jvm") version "1.6.21"
 	kotlin("plugin.spring") version "1.6.21"
 }
 
 group = "net.kutny"
-version = "2.7.0"
+version = "2.7.3"
 java.sourceCompatibility = JavaVersion.VERSION_11
 
 repositories {
@@ -17,10 +17,11 @@ repositories {
 
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter")
+
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
-	implementation("de.codecentric:spring-boot-admin-starter-server:2.7.0")
+	implementation("de.codecentric:spring-boot-admin-starter-server:2.7.3")
 }
 
 tasks.withType<KotlinCompile> {
