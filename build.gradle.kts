@@ -1,15 +1,15 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-	id("org.springframework.boot") version "2.7.2"
-	id("io.spring.dependency-management") version "1.0.11.RELEASE"
+	id("org.springframework.boot") version "2.7.5"
+	id("io.spring.dependency-management") version "1.0.15.RELEASE"
 	kotlin("jvm") version "1.6.21"
 	kotlin("plugin.spring") version "1.6.21"
 }
 
 group = "net.kutny"
-version = "2.7.3"
-java.sourceCompatibility = JavaVersion.VERSION_11
+version = "2.7.7"
+java.sourceCompatibility = JavaVersion.VERSION_17
 
 repositories {
 	mavenCentral()
@@ -21,13 +21,13 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
-	implementation("de.codecentric:spring-boot-admin-starter-server:2.7.3")
+	implementation("de.codecentric:spring-boot-admin-starter-server:2.7.7")
 }
 
 tasks.withType<KotlinCompile> {
 	kotlinOptions {
 		freeCompilerArgs = listOf("-Xjsr305=strict")
-		jvmTarget = "11"
+		jvmTarget = "17"
 	}
 }
 
